@@ -26,17 +26,23 @@
 
 	<div class="container">
 
-		<form class="form" action="">
-			<input class="input" type="text" placeholder="First name">
-			<input class="input" type="text" placeholder="Surname"><br>
+		<form name="myForm" class="form" action="">
+			<input name="input" class="input" type="text" placeholder="First name" required>
+			<input name="input" class="input" type="text" placeholder="Surname" required><br>
+
+			<p class="warning"></p>
 
 			<input class="mob" type="text" placeholder="Mobile Number or email address"><br>
 
-			<input class="pass" type="text" placeholder="New Password"><br>
+			<p class="warning"></p>
+
+			<input name="input" class="pass" type="text" placeholder="New Password" required><br>
+			<p class="warning"></p>
 
 			<label for=".date" class="label">Date of Birth <i class="fa fa-question-circle"></i></label><br>
 
-			<input type="date" class="date"><br>
+			<input name="input" type="date" class="date" required><br>
+			<p class="warning"></p>
 
 			<label for=".gender">Gender <i class="fa fa-question-circle"></i></label><br>
 
@@ -45,33 +51,45 @@
 
 				<div class="rad">
 					<label class="radio" for="female">Female</label>
-				<input type="radio" name="radio" value="Female" id="female" class="gender">
+					<input name="input" type="radio" name="radio" value="Female" id="female" required class="gender">
 				</div>
+				
 
 				<div class="rad">
 					<label class="radio" for="male">Male</label>
-				<input type="radio" name="radio" value="Male" id="male" class="gender">
+					<input name="input" type="radio" name="radio" value="Male" id="male" required class="gender">
 				</div>
 
 				<div class="rad">
 					<label class="radio" for="custom">Custom</label>
-				<input type="radio" name="radio" value="Custom" id="custom" class="gender">
+					<input name="input" type="radio" name="radio" value="Custom" id="custom" required class="gender">
 				</div>
-				
-				
-				
 			</div>
+			<br><p class="warning"></p>
+			<p class="p1">people who use our service may have uploaded your contact information to Facebook <a
+					href="#">learn more</a>.</p>
+
+			<p class="p2">By clicking Sign Up, you agree to terms, <a href="#">Data Policy</a> and <a href="#">Cookie
+					Policy</a>. You may recieve SMS notifications from us can and opt out at any time.</p>
+
+			<div class="btn">
+				<input type="button" class="signup" value="Sign Up" onclick="submitFunction()">
+
+				<a href="#" class="alter"> Already have an account?</a>
+			</div>
+
+
+			
+
 		</form>
-		<p class="p1">people who use our service may have uploaded your contact information to Facebook <a
-				href="#">learn more</a>.</p>
 
-		<p class="p2">By clicking Sign Up, you agree to terms, <a href="#">Data Policy</a> and <a href="#">Cookie
-				Policy</a>. You may recieve SMS notifications from us can and opt out at any time.</p>
 
-		<button class="signup">Sign Up</button>
+		<!-- <button class="signup" onclick="submitFunction()">Sign Up</button>
 
-		<a href="#" class="alter"> Already have an account?</a>
+		<a href="#" class="alter"> Already have an account?</a> -->
 	</div>
+
+	<script src="script.js"></script>
 </body>
 
 </html>
